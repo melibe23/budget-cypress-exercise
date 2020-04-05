@@ -31,7 +31,8 @@ Inside that folder the following files and folders.
 
 ## STEPS TO REPRODUCE IN ORDER TO RUN TESTS WITH CYPRESS.IO
 
-You need to have installed NodeJS in your machine. 
+Prerequisite: You need to have installed [NodeJS](https://nodejs.org/es/download/) in your machine. 
+
 a)	In your terminal go to /budgeting-master/e2e folder and run command
 
  ```$ npm install```
