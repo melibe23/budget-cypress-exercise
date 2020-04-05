@@ -1,5 +1,5 @@
 {
-    "reporter": "mochawesome",
+    "reporter": "./node_modules/mochawesome/src/mochawesome.js",
     "reporterOptions": {
         "charts": false,
         "html": true,

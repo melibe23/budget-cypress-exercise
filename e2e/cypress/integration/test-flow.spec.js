@@ -1,26 +1,20 @@
 import * as functions from '../data/functions';
-
+import * as selectors from '../data/selectors';
 
 
 describe('Modus Create - Cypress excersise', () => {
   before(() => {
-
     cy.request('https://budget.modus.app/budget').then(response => {
       expect(response.status).to.eq(200);
     });
     cy.visit('https://budget.modus.app/budget');
   });
 
-  // User edits already entered data
-  // it('Testing', () => {
-  //   cy.get('tbody > :nth-child(1)').click();
-  // });
-
+  // Using this test as a fake fail one
   // Add button should be disabled when no value is added
-  // Using this test as a fail one
   it('Add button is disabled when no value has been entered', () => {
     cy.log('This fail will test when it should not. It was a requirement in the exam to have one.')
-    cy.get('div:nth-child(4) > button').contains('Add')
+    cy.get(selectors.addButton).contains('Add')
       .should('not.be.disabled')
   });
 
@@ -29,11 +23,11 @@ describe('Modus Create - Cypress excersise', () => {
   it('Selected category, description and value are added to the table', () => {
     let newValue = 124
     cy.addEntry('Income', 'Cypress exercise', newValue)
-      .get('tbody tr:last-child td:nth-child(1)')
+      .get(selectors.category)
       .contains('Income')
-      .get('tbody tr:last-child td:nth-child(2)')
+      .get(selectors.description)
       .contains('Cypress exercise')
-      .get('tbody tr:last-child td:nth-child(3)')
+      .get(selectors.value)
       .contains(newValue);
   });
 
@@ -69,14 +63,11 @@ describe('Modus Create - Cypress excersise', () => {
     // Initial status of Incomes & Outcomes
     let currentIncome = functions.incomeNumber()
     let currentOutcome = functions.outcomeNumber()
-
     // Add an income
     let newValue = 345
     cy.addEntry('Income', 'Income to test Working balance!', newValue)
-
     // Get the current total amount after adding 
     let total = functions.totalNumber()
-
     // New Working balance should match incomes-outcomes
     let balance = (currentIncome - currentOutcome).toFixed(2)
     expect(total).to.equal(balance);
@@ -86,19 +77,12 @@ describe('Modus Create - Cypress excersise', () => {
     // Initial status of Incomes & Outcomes
     let currentIncome = functions.incomeNumber()
     let currentOutcome = functions.outcomeNumber()
-
     // Add an outcome
     cy.addEntry('Home', 'Outcome to test Working balance!', 500)
-
     // Get the current total amount after adding and outcome
     let total = functions.totalNumber()
-
     // New Working balance should match incomes-outcomes
     let balance = (currentIncome - currentOutcome).toFixed(2)
     expect(total).to.equal(balance);
   });
-
-
-
-
 });
