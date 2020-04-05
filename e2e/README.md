@@ -128,7 +128,7 @@ In this section, I will provide User Stories specifications of all those feature
 
 > I want to be able to update with a change the current data
 
-> So I can see my desired changes reflected in the table
+> So I can see my change reflected in the table
 
 
 #### Feature: Edit view - Delete functionality
@@ -137,5 +137,15 @@ In this section, I will provide User Stories specifications of all those feature
 
 > I want to be able to delete the current data
 
-> So I can see
+> So I can see my change reflected in the table
+
+#### Feature: Edit view - Cancel functionality
+
+> As a user 
+
+> I want to be able to cancel my edition
+
+> So I can see no change reflected in the table
+
+### Tale into account that features related to the Reports tab were also not part of the scope of this exercise so I didn't cover them. 
 
