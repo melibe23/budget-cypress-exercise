@@ -3,7 +3,7 @@ Cypress.Commands.add('addEntry', (category, description, value) => {
   cy.get('[name="description"]').type(description);
   cy.get('[type="number"]').type(value);
   cy.get('button')
-    .click()
+
 });
 
 // ***********************************************

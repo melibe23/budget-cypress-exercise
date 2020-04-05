@@ -9,18 +9,18 @@ describe('Modus Create - Cypress excersise', () => {
     cy.visit('https://budget.modus.app/budget');
   });
 
-  // Using this test as a fake fail one
-  // Add button should be disabled when no value is added
+  //Using this test as a fake fail one
+  //Add button should be disabled when no value is added
   it('Add button is disabled when no value has been entered', () => {
-    cy.log('This fail will test when it should not. It was a requirement in the exam to have one.')
+    cy.log('This test will fail when it should not. It was a requirement in the exam to have one.')
     cy.get(selectors.addButton).contains('Add')
       .should('not.be.disabled')
   });
 
-  // New data added appears in the tables
+  // New data added appears in the table
   it('Selected category, description and value are added to the table', () => {
     let newValue = 124
-    cy.addEntry('Income', 'Cypress exercise', newValue)
+    cy.addEntry('Income', 'Cypress exercise', newValue).click()
       .get(selectors.category)
       .contains('Income')
       .get(selectors.description)
@@ -29,13 +29,21 @@ describe('Modus Create - Cypress excersise', () => {
       .contains(newValue);
   });
 
+  // User adds a string in the value field
+  it('Add button is still disabled when user adds a string in the value field', () => {
+    let newValue = 'test'
+    cy.addEntry('Income', 'I will try to add a string', newValue)
+      .get(selectors.addButton).contains('Add')
+      .should('be.disabled')
+  });
+
   // Incomes
   it('Incomes are updated in Total Inflow field', () => {
     // Initial status of Incomes & Outcomes
     const currentIncome = functions.incomeNumber();
     // Add an income
     let newValue = 234
-    cy.addEntry('Income', 'Cypress will provide incomes', newValue)
+    cy.addEntry('Income', ' ', newValue).click()
     // Get the inital total + newIncome
     const nextIncome = currentIncome + newValue;
     // New status of Incomes should equal nextIncome
@@ -48,7 +56,7 @@ describe('Modus Create - Cypress excersise', () => {
     let currentOutcome = functions.outcomeNumber()
     // Add an Outcome
     let newValue = 345
-    cy.addEntry('Groceries', 'Add Groceries expenses', newValue)
+    cy.addEntry('Groceries', 'Add Groceries expenses', newValue).click()
     // Get the inital total + newOutcome
     const nextOutcome = currentOutcome + newValue;
     // New status of Incomes should equal nextIncome
@@ -61,11 +69,11 @@ describe('Modus Create - Cypress excersise', () => {
     let currentIncome = functions.incomeNumber()
     let currentOutcome = functions.outcomeNumber()
     // Add an income
-    let newValue = 345
-    cy.addEntry('Income', 'Income to test Working balance!', newValue)
-    // Get the current total amount after adding 
+    let newValue = 845
+    cy.addEntry('Income', 'Income to test Working balance!', newValue).click()
+    // Get the current total amount after adding an income
     let total = functions.totalNumber()
-    // New Working balance should match incomes-outcomes
+    // New Working balance should match incomes less outcomes
     let balance = (currentIncome - currentOutcome).toFixed(2)
     expect(total).to.equal(balance);
   });
@@ -75,10 +83,10 @@ describe('Modus Create - Cypress excersise', () => {
     let currentIncome = functions.incomeNumber()
     let currentOutcome = functions.outcomeNumber()
     // Add an outcome
-    cy.addEntry('Home', 'Outcome to test Working balance!', 500)
-    // Get the current total amount after adding and outcome
+    cy.addEntry('Home', 'Outcome to test Working balance!', 500).click()
+    // Get the current total amount after adding an outcome
     let total = functions.totalNumber()
-    // New Working balance should match incomes-outcomes
+    // New Working balance should match incomes less outcomes
     let balance = (currentIncome - currentOutcome).toFixed(2)
     expect(total).to.equal(balance);
   });
