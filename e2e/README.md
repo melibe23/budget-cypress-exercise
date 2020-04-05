@@ -76,9 +76,19 @@ In this section, I will provide User Stories specifications of all those feature
 
 > As a user
 
-> I want to add category, description, and value to the table
+> I want to add category, description, and a value to the table
 
 > So I can see my income/outcome reflected in the table
+
+
+#### Feature: Add button is still disabled when user adds a string in the value field ####
+
+> As a user
+
+> I want not to be able to add category, description, and value if in value field a string was entered
+
+> So I can only see numbers in the amount column 
+
 
 #### Feature: Incomes are updated in Total Inflow field ####
 
