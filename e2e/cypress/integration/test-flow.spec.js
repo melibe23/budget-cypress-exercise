@@ -59,7 +59,7 @@ describe('Modus Create - Cypress excersise', () => {
     cy.addEntry('Groceries', 'Add Groceries expenses', newValue).click()
     // Get the inital total + newOutcome
     let nextOutcome = currentOutcome + newValue;
-    // New status of Incomes should equal nextIncome
+    // New status of Outcomes should equal nextOutcome
     expect(nextOutcome).to.equal(currentOutcome + newValue);
   });
 
