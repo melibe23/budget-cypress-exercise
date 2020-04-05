@@ -61,51 +61,51 @@ In this section, I will provide User Stories speccifications of all those featur
 
 #### Feature: Add button is disabled when no value has been entered (This test will faild per request from Modus Create) ####
 
-As a user
+> As a user
 
-I want not to be able to add content to the table if none value has been added
+> I want not to be able to add content to the table if none value has been added
 
-So I can only add items with correct data
+> So I can only add items with correct data
 
 #### Feature: Selected category, description and value are added to the table ####
 
-As a user
+> As a user
 
-I want to add category, description and value to the table
+> I want to add category, description and value to the table
 
-So I can see my income/outcome reflected in the table
+> So I can see my income/outcome reflected in the table
 
 #### Feature: Incomes are updated in Total Inflow field ####
 
-As a user 
+> As a user 
 
-I want to be able to add an income
+> I want to be able to add an income
 
-So I can see the Total Inflow field correctly updated 
+> So I can see the Total Inflow field correctly updated 
 
 #### Feature: Incomes are updated in Total Outflow field ####
 
-As a user 
+> As a user 
 
-I want to be able to add an outcome
+> I want to be able to add an outcome
 
-So I can see the Total Outflow field correctly updated 
+> So I can see the Total Outflow field correctly updated 
 
 #### Feature: Added an Income = Total amount is updated in Working balance field ####
 
-As a user
+> As a user
 
-I want to be able to add an income
+> I want to be able to add an income
 
-So I can see the my Working balance field updated
+> So I can see the my Working balance field updated
 
 #### Feature: Added an Outcome = Total amount is updated in Working balance field ####
 
-As a user 
+> As a user 
 
-I want to be able to add an outcome
+> I want to be able to add an outcome
 
-So I can see the my Working balance field updated
+> So I can see the my Working balance field updated
 
 
 
