@@ -1,6 +1,6 @@
-## Readme in order to run the Cypress.io test
+Readme in order to run the Cypress.io test
 
-# Once you download the repo you will find a folder at the top called ‘e2e’:
+## Once you download the repo you will find a folder at the top called ‘e2e’: ##
 
 Inside that folder the following files and folders.
 
@@ -40,10 +40,10 @@ b) A 'node_module' folder should have been created.
 c) Now you can run the testS by running the following command (be sure you are inside /e2e, otherwise the commands won’t work).
 
 In order to run it using Cypress GUI:
-```$ npx cypress open --reporter mochawesome```
+> ```$ npx cypress open```
 
-In order to run it using headless:
-```$ npx cypress run --reporter mochawesome```
+In order to run it using headless AND to generate a report use this command. Notice that adding '--reporter mochawesome' won't work with the comman above. I am still investigating why. No luck yet ¯\_(ツ)_/¯
+> ```$ npx cypress run --reporter mochawesome```
 
 d) Test should be run and a Report JSON and HTML should have been saved inside e2e/reports. Open the html file in order to see the outcome.
 
