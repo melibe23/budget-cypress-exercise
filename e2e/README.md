@@ -38,6 +38,7 @@ a)	In your terminal go to ../budget-cypress-exercise/e2e folder and run command
 This will install all the dependencies required for the project.
 
 b) A 'node_module' folder should have been created.
+
 c) Now you can run the tests by running the following command (be sure you are inside /e2e, otherwise the commands won’t work).
 
 In order to run it using Cypress GUI:
