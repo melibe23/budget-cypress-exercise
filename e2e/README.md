@@ -6,19 +6,19 @@ Inside that folder the following files and folders.
 
 1. Folder called "cypress". Where you will find:
 
-a.    /data folder: Where a functions.js file is located. This files contains functions needed to run the tests.
+ a.    /data folder: Where a functions.js file is located. This files contains functions needed to run the tests.
 
-b.   	/integration folder: Test files are located here
+ b.   	/integration folder: Test files are located here
 
-c.   	/plugin folder: Cypress includes the plugins index.js before every single spec file it runs.
+ c.   	/plugin folder: Cypress includes the plugins index.js before every single spec file it runs.
 
-d.    /reports folder: The two main files here to be aware of are
-·  	report.html - The rendered report file
-·  	report.json - The raw json output used to render the report
+ d.    /reports folder: The two main files here to be aware of are
+  ·  	report.html - The rendered report file
+  ·  	report.json - The raw json output used to render the report
 
-c.   /screenshots folder: Cypress will automatically capture screenshots when a failure happens during cypress run and will be located here. Screenshots on failure are not automatically taken during cypress open.
+ e.   /screenshots folder: Cypress will automatically capture screenshots when a failure happens during cypress run and will be located here. Screenshots on failure are not automatically taken during cypress open.
 
-d.   	/support/commands.js and index.js: The support file is a great place to put reusable behaviour such as Custom Commands or global overrides that you want applied and available to all of your spec files.
+ f.   	/support/commands.js and index.js: The support file is a great place to put reusable behaviour such as Custom Commands or global overrides that you want applied and available to all of your spec files.
 
 2. A package-lock.json file (this file was automatically generated for any operations where npm modifies either the node_modules tree, or package.json).
 
