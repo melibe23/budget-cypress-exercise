@@ -1,8 +1,6 @@
-# Readme in order to run the Cypress.io test
+## Readme in order to run the Cypress.io test
 
-Once you download the repo you will find a folder at the top called ‘e2e’:
-
-## ‘e2e’:
+# Once you download the repo you will find a folder at the top called ‘e2e’:
 
 Inside that folder the following files and folders.
 
