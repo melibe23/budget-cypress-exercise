@@ -159,5 +159,5 @@ In this section, I will provide User Stories specifications of all those feature
 
 > So I can see no change reflected in the table
 
-### Take into account that features related to the Reports tab were also not part of the scope of this testing so I didn't cover them, and for those spects, there are no User stories either.
+### Take into account that features related to the Reports tab were also not part of the scope of this testing so I didn't cover them, and for those specs, there are no User stories either.
 
