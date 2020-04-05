@@ -1,6 +1,6 @@
 import * as functions from '../data/functions';
 
-const newValue = 124
+
 
 describe('Modus Create - Cypress excersise', () => {
   before(() => {
@@ -27,7 +27,7 @@ describe('Modus Create - Cypress excersise', () => {
 
   // New data added appears in the tables
   it('Selected category, description and value are added to the table', () => {
-
+    let newValue = 124
     cy.addEntry('Income', 'Cypress exercise', newValue)
       .get('tbody tr:last-child td:nth-child(1)')
       .contains('Income')
@@ -38,10 +38,11 @@ describe('Modus Create - Cypress excersise', () => {
   });
 
   // Incomes
-  it('Incomes are reflected in Total Inflow field', () => {
+  it('Incomes are updated in Total Inflow field', () => {
     // Initial status of Incomes & Outcomes
     const currentIncome = functions.incomeNumber();
     // Add an income
+    let newValue = 234
     cy.addEntry('Income', 'Cypress will provide incomes', newValue)
     // Get the inital total + newIncome
     const nextIncome = currentIncome + newValue;
@@ -50,10 +51,11 @@ describe('Modus Create - Cypress excersise', () => {
   });
 
   // Outcomes
-  it('Outcomes are reflected in Total Outflow field', () => {
+  it('Outcomes are updated in Total Outflow field', () => {
     // Initial status of Outcomes
     let currentOutcome = functions.outcomeNumber()
     // Add an Outcome
+    let newValue = 345
     cy.addEntry('Groceries', 'Add Groceries expenses', newValue)
     // Get the inital total + newOutcome
     const nextOutcome = currentOutcome + newValue;
@@ -63,13 +65,14 @@ describe('Modus Create - Cypress excersise', () => {
   });
 
   // Working Balance
-  it('Added an Income = Total amount is reflected in Working balance field', () => {
+  it('Added an Income = Total amount is updated in Working balance field', () => {
     // Initial status of Incomes & Outcomes
     let currentIncome = functions.incomeNumber()
     let currentOutcome = functions.outcomeNumber()
 
     // Add an income
-    cy.addEntry('Income', 'Income to test Working balance!', 300)
+    let newValue = 345
+    cy.addEntry('Income', 'Income to test Working balance!', newValue)
 
     // Get the current total amount after adding 
     let total = functions.totalNumber()
@@ -79,7 +82,7 @@ describe('Modus Create - Cypress excersise', () => {
     expect(total).to.equal(balance);
   });
 
-  it('Added an Outcome = Total amount is reflected in Working balance field', () => {
+  it('Added an Outcome = Total amount is updated in Working balance field', () => {
     // Initial status of Incomes & Outcomes
     let currentIncome = functions.incomeNumber()
     let currentOutcome = functions.outcomeNumber()
