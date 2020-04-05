@@ -19,7 +19,7 @@ describe('Modus Create - Cypress exercise', () => {
 
   // New data added appears in the table
   it('Selected category, description and value are added to the table', () => {
-    let newValue = 124
+    let newValue = 1
     cy.addEntry('Income', 'Cypress exercise', newValue).click()
       .get(selectors.category)
       .contains('Income')
@@ -42,10 +42,10 @@ describe('Modus Create - Cypress exercise', () => {
     // Initial status of Incomes & Outcomes
     let currentIncome = functions.incomeNumber();
     // Add an income
-    let newValue = 234
+    let newValue = 1
     cy.addEntry('Income', ' ', newValue).click()
     // Get the inital total + newIncome
-    let nextIncome = currentIncome + newValue;
+    let nextIncome = functions.incomeNumber()
     // New status of Incomes should equal nextIncome
     expect(nextIncome).to.equal(currentIncome + newValue);
   });
@@ -55,10 +55,10 @@ describe('Modus Create - Cypress exercise', () => {
     // Initial status of Outcomes
     let currentOutcome = functions.outcomeNumber()
     // Add an Outcome
-    let newValue = 345
+    let newValue = 1
     cy.addEntry('Groceries', 'Add Groceries expenses', newValue).click()
     // Get the inital total + newOutcome
-    let nextOutcome = currentOutcome + newValue;
+    let nextOutcome = functions.outcomeNumber()
     // New status of Outcomes should equal nextOutcome
     expect(nextOutcome).to.equal(currentOutcome + newValue);
   });
@@ -69,7 +69,7 @@ describe('Modus Create - Cypress exercise', () => {
     let currentIncome = functions.incomeNumber()
     let currentOutcome = functions.outcomeNumber()
     // Add an income
-    let newValue = 845
+    let newValue = 1
     cy.addEntry('Income', 'Income to test Working balance!', newValue).click()
     // Get the current total amount after adding an income
     let total = functions.totalNumber()
