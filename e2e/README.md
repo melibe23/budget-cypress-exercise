@@ -42,11 +42,12 @@ b) A 'node_module' folder should have been created.
 c) Now you can run the tests by running the following command (be sure you are inside /e2e, otherwise the commands won’t work).
 
 In order to run it using Cypress GUI:
-> ```$ npx cypress open```
 
-In order to run it using headless AND to generate a report use this command. Notice that adding '--reporter mochawesome' won't work with the command above.  
+ ```$ npx cypress open```
 
-> ```$ npx cypress run --reporter mochawesome```
+In order to run it headless AND to generate a report use the following command. Notice that adding '--reporter mochawesome' won't work with the command above (open).  
+
+ ```$ npx cypress run --reporter mochawesome```
 
 d) Tests should be run and a Report JSON and HTML should have been saved inside e2e/reports. Open the html file in order to see the outcome.
 
