@@ -57,7 +57,6 @@ describe('Modus Create - Cypress exercise', () => {
   // This test is failing because it never gets to the new number. In line 66, I expect to have the new value.
   // In the previous step I added 1 as an Outcome, but this line still stores the original value, never the updated one.
   // After a lot of investigation, I honestly don't know why is happeing. I would appreciate any feedback. 
-
   it('Outcomes are updated in Total Outflow field', () => {
     // Initial status of Outcomes
     let currentOutcome = functions.outcomeNumber()
