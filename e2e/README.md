@@ -59,35 +59,52 @@ The objective of the test is to verify that the main functionalities are working
 In this section, I will provide User Stories speccifications of all those features that have been identified as features to be tested. They are written in BDD.
 
 
-* Feature: Add button is disabled when no value has been entered (This test will faild per request from Modus Create)
+#### Feature: Add button is disabled when no value has been entered (This test will faild per request from Modus Create) ####
+
 As a user
+
 I want not to be able to add content to the table if none value has been added
+
 So I can only add items with correct data
 
 #### Feature: Selected category, description and value are added to the table ####
 
 As a user
+
 I want to add category, description and value to the table
+
 So I can see my income/outcome reflected in the table
 
-*Feature: Incomes are updated in Total Inflow field
+#### Feature: Incomes are updated in Total Inflow field ####
+
 As a user 
+
 I want to be able to add an income
+
 So I can see the Total Inflow field correctly updated 
 
-*Feature: Incomes are updated in Total Outflow field
+#### Feature: Incomes are updated in Total Outflow field ####
+
 As a user 
+
 I want to be able to add an outcome
+
 So I can see the Total Outflow field correctly updated 
 
-*Feature: Added an Income = Total amount is updated in Working balance field
-As a user 
+#### Feature: Added an Income = Total amount is updated in Working balance field ####
+
+As a user
+
 I want to be able to add an income
+
 So I can see the my Working balance field updated
 
-*Feature: Added an Outcome = Total amount is updated in Working balance field
+#### Feature: Added an Outcome = Total amount is updated in Working balance field ####
+
 As a user 
+
 I want to be able to add an outcome
+
 So I can see the my Working balance field updated
 
 
