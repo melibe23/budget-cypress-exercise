@@ -40,12 +40,12 @@ describe('Modus Create - Cypress excersise', () => {
   // Incomes
   it('Incomes are updated in Total Inflow field', () => {
     // Initial status of Incomes & Outcomes
-    const currentIncome = functions.incomeNumber();
+    let currentIncome = functions.incomeNumber();
     // Add an income
     let newValue = 234
     cy.addEntry('Income', ' ', newValue).click()
     // Get the inital total + newIncome
-    const nextIncome = currentIncome + newValue;
+    let nextIncome = currentIncome + newValue;
     // New status of Incomes should equal nextIncome
     expect(nextIncome).to.equal(currentIncome + newValue);
   });
@@ -58,7 +58,7 @@ describe('Modus Create - Cypress excersise', () => {
     let newValue = 345
     cy.addEntry('Groceries', 'Add Groceries expenses', newValue).click()
     // Get the inital total + newOutcome
-    const nextOutcome = currentOutcome + newValue;
+    let nextOutcome = currentOutcome + newValue;
     // New status of Incomes should equal nextIncome
     expect(nextOutcome).to.equal(currentOutcome + newValue);
   });
