@@ -13,8 +13,8 @@ Inside that folder the following files and folders.
  -	/plugin folder: Cypress includes the plugins index.js before every single spec file it runs.
 
  - /reports folder: The two main files here to be aware of are
-  -  	report.html - The rendered report file
-  -  	report.json - The raw json output used to render the report
+  >  	report.html - The rendered report file
+  >  	report.json - The raw json output used to render the report
 
  - /screenshots folder: Cypress will automatically capture screenshots when a failure happens during cypress run and will be located here. Screenshots on failure are not automatically taken during cypress open.
 
