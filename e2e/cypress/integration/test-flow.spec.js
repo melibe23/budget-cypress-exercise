@@ -1,7 +1,7 @@
 import * as functions from '../data/functions';
 import * as selectors from '../data/selectors';
 
-describe('Modus Create - Cypress excersise', () => {
+describe('Modus Create - Cypress exercise', () => {
   before(() => {
     cy.request('https://budget.modus.app/budget').then(response => {
       expect(response.status).to.eq(200);
