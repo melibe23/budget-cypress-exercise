@@ -63,7 +63,7 @@ describe('Modus Create - Cypress exercise', () => {
     expect(nextOutcome).to.equal(currentOutcome + newValue);
   });
 
-  // Working Balance
+  // Working Balance after adding an Income
   it('Added an Income = Total amount is updated in Working balance field', () => {
     // Initial status of Incomes & Outcomes
     let currentIncome = functions.incomeNumber()
@@ -78,6 +78,7 @@ describe('Modus Create - Cypress exercise', () => {
     expect(total).to.equal(balance);
   });
 
+  // Working Balance after adding an Outcome
   it('Added an Outcome = Total amount is updated in Working balance field', () => {
     // Initial status of Incomes & Outcomes
     let currentIncome = functions.incomeNumber()
