@@ -6,7 +6,8 @@ Once you download the repo you will find a folder at the top called ‘e2e’:
 
 Inside that folder the following files and folders.
 
-Folder called "cypress". Where you will find:
+1. Folder called "cypress". Where you will find:
+
 a.   	/integration folder: Test files are located here
 
 b.   	/plugin folder: Cypress includes the plugins index.js before every single spec file it runs.
