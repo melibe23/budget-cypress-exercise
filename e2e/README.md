@@ -6,9 +6,7 @@ Inside that folder the following files and folders.
 
 1. Folder called "cypress". Where you will find:
 
- - /data folder: Where a functions.js contains functions needed to run the tests and selectors.js contains the most of the selectors used here.
- 
-  - /selectors folder: Where a functions.js file is located. This files contains functions needed to run the tests.
+ - /data folder: Where a functions.js contains functions needed to run the tests and selectors.js contains most of the selectors used here.
 
  - /integration folder: Test files are located here
 
