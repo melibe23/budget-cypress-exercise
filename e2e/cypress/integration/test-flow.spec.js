@@ -38,7 +38,9 @@ describe('Modus Create - Cypress exercise', () => {
   });
 
   // Incomes
-  // This test is failing because it never gets to the new number, but I cannot tell why
+  // This test is failing because it never gets to the new number. In line 51, I expect to have the new value.
+  // In the previous step I added 1 as an Income, but this line still stores the original value, never the updated one.
+  // After a lot of investigation, I honestly don't know why is happeing. I would appreciate any feedback. 
   it('Incomes are updated in Total Inflow field', () => {
     // Initial status of Incomes & Outcomes
     let currentIncome = functions.incomeNumber();
@@ -52,7 +54,10 @@ describe('Modus Create - Cypress exercise', () => {
   });
 
   // Outcomes
-  // This test is failing because it never gets to the new number, but I cannot tell why
+  // This test is failing because it never gets to the new number. In line 66, I expect to have the new value.
+  // In the previous step I added 1 as an Outcome, but this line still stores the original value, never the updated one.
+  // After a lot of investigation, I honestly don't know why is happeing. I would appreciate any feedback. 
+
   it('Outcomes are updated in Total Outflow field', () => {
     // Initial status of Outcomes
     let currentOutcome = functions.outcomeNumber()
@@ -62,7 +67,7 @@ describe('Modus Create - Cypress exercise', () => {
     // Get the inital total + newOutcome
     let nextOutcome = functions.outcomeNumber()
     // New status of Outcomes should equal nextOutcome
-    expect(nextOutcome).to.contain(currentOutcome + newValue);
+    expect(nextOutcome).to.equal(currentOutcome + newValue);
   });
 
   // Working Balance after adding an Income
