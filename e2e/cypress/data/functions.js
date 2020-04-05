@@ -1,6 +1,3 @@
-import * as selectors from '../data/selectors';
-
-
 export function incomeNumber() {
   const incomeTotal = Cypress.$('#root > main > section > div > div > div:nth-child(1) > div > div:first-child')[0]
     .innerText;

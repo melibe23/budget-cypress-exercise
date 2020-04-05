@@ -1,7 +1,6 @@
 import * as functions from '../data/functions';
 import * as selectors from '../data/selectors';
 
-
 describe('Modus Create - Cypress excersise', () => {
   before(() => {
     cy.request('https://budget.modus.app/budget').then(response => {
@@ -17,7 +16,6 @@ describe('Modus Create - Cypress excersise', () => {
     cy.get(selectors.addButton).contains('Add')
       .should('not.be.disabled')
   });
-
 
   // New data added appears in the tables
   it('Selected category, description and value are added to the table', () => {
@@ -55,7 +53,6 @@ describe('Modus Create - Cypress excersise', () => {
     const nextOutcome = currentOutcome + newValue;
     // New status of Incomes should equal nextIncome
     expect(nextOutcome).to.equal(currentOutcome + newValue);
-
   });
 
   // Working Balance

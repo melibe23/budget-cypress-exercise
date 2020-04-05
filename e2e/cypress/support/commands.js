@@ -1,3 +1,11 @@
+Cypress.Commands.add('addEntry', (category, description, value) => {
+  cy.get("[name='categoryId']").select(category);
+  cy.get('[name="description"]').type(description);
+  cy.get('[type="number"]').type(value);
+  cy.get('button')
+    .click()
+});
+
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
@@ -23,16 +31,3 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
-
-Cypress.Commands.add('addEntry', (category, description, value) => {
-  cy.get("[name='categoryId']").select(category);
-  cy.get('[name="description"]').type(description);
-  cy.get('[type="number"]').type(value);
-  cy.get('button')
-    .click()
-    .wait(3)
-});
-
-
-
-
