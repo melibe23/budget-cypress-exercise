@@ -13,6 +13,5 @@ coverage
 /.vscode
 /.babel-cache
 *.report.html
-cyress/videos
-cyress/screenshots
+
 
