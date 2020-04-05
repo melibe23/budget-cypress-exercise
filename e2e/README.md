@@ -1,4 +1,4 @@
-Readme in order to run the Cypress.io test
+Read me in order to run the Cypress.io test
 
 ## Once you download the repo you will find a folder at the top called ‘e2e’: ##
 
@@ -147,5 +147,5 @@ In this section, I will provide User Stories specifications of all those feature
 
 > So I can see no change reflected in the table
 
-### Tale into account that features related to the Reports tab were also not part of the scope of this exercise so I didn't cover them. 
+### Take into account that features related to the Reports tab were also not part of the scope of this exercise so I didn't cover them. 
 
