@@ -6,9 +6,7 @@ Inside that folder the following files and folders.
 
 1. Folder called "cypress". Where you will find:
 
- - /data folder: Where a functions.js contains functions needed to run the tests and selectors.js contains the most of the selectors used here.
- 
-  - /selectors folder: Where a functions.js file is located. This files contains functions needed to run the tests.
+ - /data folder: Where a functions.js contains functions needed to run the tests and selectors.js contains most of the selectors used here.
 
  - /integration folder: Test files are located here
 
@@ -33,7 +31,7 @@ Inside that folder the following files and folders.
 
 Prerequisite: You need to have installed [NodeJS](https://nodejs.org/es/download/) in your machine. 
 
-a)	In your terminal go to /budgeting-master/e2e folder and run command
+a)	In your terminal go to ../budget-cypress-exercise/e2e folder and run command
 
  ```$ npm install```
 
@@ -46,7 +44,7 @@ In order to run it using Cypress GUI:
 
  ```$ npx cypress open```
 
-In order to run it headless AND to generate a report use the following command. Notice that adding '--reporter mochawesome' won't work with the command above (open).  
+In order to run it headless AND to generate a HTML report use the following command. Notice that adding '--reporter mochawesome' won't work with the command above (open).  
 
  ```$ npx cypress run --reporter mochawesome```
 
@@ -159,5 +157,5 @@ In this section, I will provide User Stories specifications of all those feature
 
 > So I can see no change reflected in the table
 
-### Take into account that features related to the Reports tab were also not part of the scope of this exercise so I didn't cover them. 
+### Take into account that features related to the Reports tab were also not part of the scope of this testing so I didn't cover them, and for those specs, there are no User stories either.
 
