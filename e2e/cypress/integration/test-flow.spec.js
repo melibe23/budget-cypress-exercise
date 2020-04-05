@@ -38,6 +38,7 @@ describe('Modus Create - Cypress exercise', () => {
   });
 
   // Incomes
+  // This test is failing because it never gets to the new number, but I cannot tell why
   it('Incomes are updated in Total Inflow field', () => {
     // Initial status of Incomes & Outcomes
     let currentIncome = functions.incomeNumber();
@@ -51,6 +52,8 @@ describe('Modus Create - Cypress exercise', () => {
   });
 
   // Outcomes
+  // This test is failing because it never gets to the new number, but I cannot tell why
+
   it('Outcomes are updated in Total Outflow field', () => {
     // Initial status of Outcomes
     let currentOutcome = functions.outcomeNumber()
