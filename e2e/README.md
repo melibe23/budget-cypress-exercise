@@ -6,19 +6,19 @@ Inside that folder the following files and folders.
 
 1. Folder called "cypress". Where you will find:
 
- a.    /data folder: Where a functions.js file is located. This files contains functions needed to run the tests.
+ - /data folder: Where a functions.js file is located. This files contains functions needed to run the tests.
 
- b.   	/integration folder: Test files are located here
+ - /integration folder: Test files are located here
 
- c.   	/plugin folder: Cypress includes the plugins index.js before every single spec file it runs.
+ -	/plugin folder: Cypress includes the plugins index.js before every single spec file it runs.
 
- d.    /reports folder: The two main files here to be aware of are
-  ·  	report.html - The rendered report file
-  ·  	report.json - The raw json output used to render the report
+ - /reports folder: The two main files here to be aware of are
+  -  	report.html - The rendered report file
+  -  	report.json - The raw json output used to render the report
 
- e.   /screenshots folder: Cypress will automatically capture screenshots when a failure happens during cypress run and will be located here. Screenshots on failure are not automatically taken during cypress open.
+ - /screenshots folder: Cypress will automatically capture screenshots when a failure happens during cypress run and will be located here. Screenshots on failure are not automatically taken during cypress open.
 
- f.   	/support/commands.js and index.js: The support file is a great place to put reusable behaviour such as Custom Commands or global overrides that you want applied and available to all of your spec files.
+ -	/support/commands.js and index.js: The support file is a great place to put reusable behaviour such as Custom Commands or global overrides that you want applied and available to all of your spec files.
 
 2. A package-lock.json file (this file was automatically generated for any operations where npm modifies either the node_modules tree, or package.json).
 
@@ -59,32 +59,32 @@ The objective of the test is to verify that the main functionalities are working
 In this section, I will provide User Stories speccifications of all those features that have been identified as features to be tested. They are written in BDD.
 
 
-#Feature: Add button is disabled when no value has been entered (This test will faild per request from Modus Create)
+# Feature: Add button is disabled when no value has been entered (This test will faild per request from Modus Create)
 As a user
 I want not to be able to add content to the table if none value has been added
 So I can only add items with correct data
 
-#Feature: Selected category, description and value are added to the table
+# Feature: Selected category, description and value are added to the table
 As a user
 I want to add category, description and value to the table
 So I can see my income/outcome reflected in the table
 
-#Feature: Incomes are updated in Total Inflow field
+# Feature: Incomes are updated in Total Inflow field
 As a user 
 I want to be able to add an income
 So I can see the Total Inflow field correctly updated 
 
-#Feature: Incomes are updated in Total Outflow field
+# Feature: Incomes are updated in Total Outflow field
 As a user 
 I want to be able to add an outcome
 So I can see the Total Outflow field correctly updated 
 
-#Feature: Added an Income = Total amount is updated in Working balance field
+# Feature: Added an Income = Total amount is updated in Working balance field
 As a user 
 I want to be able to add an income
 So I can see the my Working balance field updated
 
-#Feature: Added an Outcome = Total amount is updated in Working balance field
+# Feature: Added an Outcome = Total amount is updated in Working balance field
 As a user 
 I want to be able to add an outcome
 So I can see the my Working balance field updated
