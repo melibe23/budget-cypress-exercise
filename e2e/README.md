@@ -59,7 +59,7 @@ The objective of the test is to verify that the main functionalities are working
 In this section, I will provide User Stories specifications of all those features that have been identified as features to be tested. They are written in BDD.
 
 
-#### Feature: Add button is disabled when no value has been entered (This test will faild per request from Modus Create) ####
+#### Feature: Add button is disabled when no value has been entered (This test will fail per request from Modus Create) ####
 
 > As a user
 
