@@ -1,6 +1,6 @@
-## Readme in order to run the Cypress.io test
+Readme in order to run the Cypress.io test
 
-# Once you download the repo you will find a folder at the top called ‘e2e’:
+## Once you download the repo you will find a folder at the top called ‘e2e’: ##
 
 Inside that folder the following files and folders.
 
@@ -13,8 +13,8 @@ Inside that folder the following files and folders.
  -	/plugin folder: Cypress includes the plugins index.js before every single spec file it runs.
 
  - /reports folder: The two main files here to be aware of are
-  -  	report.html - The rendered report file
-  -  	report.json - The raw json output used to render the report
+  >  	report.html - The rendered report file
+  >  	report.json - The raw json output used to render the report
 
  - /screenshots folder: Cypress will automatically capture screenshots when a failure happens during cypress run and will be located here. Screenshots on failure are not automatically taken during cypress open.
 
@@ -40,10 +40,10 @@ b) A 'node_module' folder should have been created.
 c) Now you can run the testS by running the following command (be sure you are inside /e2e, otherwise the commands won’t work).
 
 In order to run it using Cypress GUI:
-```$ npx cypress open --reporter mochawesome```
+> ```$ npx cypress open```
 
-In order to run it using headless:
-```$ npx cypress run --reporter mochawesome```
+In order to run it using headless AND to generate a report use this command. Notice that adding '--reporter mochawesome' won't work with the comman above. I am still investigating why. No luck yet ¯\_(ツ)_/¯
+> ```$ npx cypress run --reporter mochawesome```
 
 d) Test should be run and a Report JSON and HTML should have been saved inside e2e/reports. Open the html file in order to see the outcome.
 
@@ -56,38 +56,56 @@ The objective of the test is to verify that the main functionalities are working
 - Cross-browser testing (I will only cover Chrome browser, althoug you can add --browser {browsername} to the command and test it in all the browsers that Cypress supports installed in your machine)
 - Mobile testing
  
-In this section, I will provide User Stories speccifications of all those features that have been identified as features to be tested. They are written in BDD.
+In this section, I will provide User Stories specifications of all those features that have been identified as features to be tested. They are written in BDD.
 
 
-# Feature: Add button is disabled when no value has been entered (This test will faild per request from Modus Create)
-As a user
-I want not to be able to add content to the table if none value has been added
-So I can only add items with correct data
+#### Feature: Add button is disabled when no value has been entered (This test will fail per request from Modus Create) ####
 
-# Feature: Selected category, description and value are added to the table
-As a user
-I want to add category, description and value to the table
-So I can see my income/outcome reflected in the table
+> As a user
 
-# Feature: Incomes are updated in Total Inflow field
-As a user 
-I want to be able to add an income
-So I can see the Total Inflow field correctly updated 
+> I want not to be able to add content to the table if none value has been added
 
-# Feature: Incomes are updated in Total Outflow field
-As a user 
-I want to be able to add an outcome
-So I can see the Total Outflow field correctly updated 
+> So I can only add items with correct data
 
-# Feature: Added an Income = Total amount is updated in Working balance field
-As a user 
-I want to be able to add an income
-So I can see the my Working balance field updated
+#### Feature: Selected category, description and value are added to the table ####
 
-# Feature: Added an Outcome = Total amount is updated in Working balance field
-As a user 
-I want to be able to add an outcome
-So I can see the my Working balance field updated
+> As a user
+
+> I want to add category, description and value to the table
+
+> So I can see my income/outcome reflected in the table
+
+#### Feature: Incomes are updated in Total Inflow field ####
+
+> As a user 
+
+> I want to be able to add an income
+
+> So I can see the Total Inflow field correctly updated 
+
+#### Feature: Incomes are updated in Total Outflow field ####
+
+> As a user 
+
+> I want to be able to add an outcome
+
+> So I can see the Total Outflow field correctly updated 
+
+#### Feature: Added an Income = Total amount is updated in Working balance field ####
+
+> As a user
+
+> I want to be able to add an income
+
+> So I can see the my Working balance field updated
+
+#### Feature: Added an Outcome = Total amount is updated in Working balance field ####
+
+> As a user 
+
+> I want to be able to add an outcome
+
+> So I can see the my Working balance field updated
 
 
 
