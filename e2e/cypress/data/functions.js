@@ -1,24 +1,30 @@
+import {
+  value,
+  totalInflow,
+  totalOutflow,
+  totalBalance
+} from "./selectors";
+
+export function clearValue(value) {
+  return Number(value.replace(/\$|,/g, ""));
+}
+
+export function valueInTable() {
+  const valueInTable = Cypress.$(value).text()
+  return clearValue(valueInTable)
+}
+
 export function incomeNumber() {
-  const incomeTotal = Cypress.$('#root > main > section > div > div > div:nth-child(1) > div > div:first-child')[0]
-    .innerText;
-  const cleanValues = incomeTotal.replace(/\$|,/g, '');
-  const numbers = Number(cleanValues);
-  return numbers;
+  const incomeTotal = Cypress.$(totalInflow).text();
+  return clearValue(incomeTotal);
 }
 
 export function outcomeNumber() {
-  const outcomeTotal = Cypress.$('#root > main > section > div > div > div:nth-child(3) > div > div:first-child')[0]
-    .innerText;
-  const cleanValues = outcomeTotal.replace(/\$|,/g, '');
-  const numbers = Number(cleanValues);
-  return numbers;
+  const outcomeTotal = Cypress.$(totalOutflow).text();
+  return clearValue(outcomeTotal);
 }
 
 export function totalNumber() {
-  const total = Cypress.$('#root > main > section > div > div > div:nth-child(5) > div > div:first-child')[0]
-    .innerText;
-  const cleanValues = total.replace(/\$|,/g, '');
-  const numbers = Number(cleanValues);
-  const nodecimal = numbers.toFixed(2)
-  return nodecimal;
+  const total = Cypress.$(totalBalance).text();
+  return clearValue(total);
 }
