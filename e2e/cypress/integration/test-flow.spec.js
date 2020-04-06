@@ -21,23 +21,22 @@ describe("Modus Create - Cypress exercise", () => {
   });
 
   // New data added appears in the table
-  it("Selected category, description and value are added to the table", () => {
-    let newValue = 133;
-    cy.addEntry("Income", "Cypress exercise", newValue)
-      .click()
-      .get(selectors.category)
-      .contains("Income")
-      .get(selectors.description)
-      .contains("Cypress exercise")
-      .invoke("text")
-      .should('eq', "Cypress exercise")
-      .get(selectors.value)
-      .then(($value) => {
-        const txt = $value.text()
-        const num = functions.clearValue(txt)
-        expect(num).to.equal(newValue);
-      })
-  });
+it('Selected category, description and value are added to the table', () => {
+		let newValue = 133;
+		cy
+			.addEntry('Income', 'Cypress exercise', newValue)
+			.click()
+			.get(selectors.category)
+			.contains('Income')
+			.get(selectors.description)
+			.contains('Cypress exercise')
+			.get(selectors.value)
+			.then(($value) => {
+				const txt = $value.text();
+				const num = functions.clearValue(txt);
+				expect(num).to.equal(newValue);
+			});
+	});
 
   // User adds a string in the value field
   it("Add button is still disabled when user adds a string in the value field", () => {
